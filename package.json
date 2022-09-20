@@ -1,0 +1,28 @@
+{
+  "name": "@handie/meta",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./build",
+    "clean:site": "rm -rf ./site/.asset-cache",
+    "start": "cd ./site && rake run",
+    "predeploy": "npm run clean:site",
+    "deploy": "cd ./site && rake deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/handiejs/.github.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/handiejs/.github/issues"
+  },
+  "homepage": "https://handiejs.github.io/",
+  "devDependencies": {
+    "handie": "^1.0.8",
+    "js-yaml": "^3.14.0"
+  }
+}

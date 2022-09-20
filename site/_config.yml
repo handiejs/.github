@@ -1,0 +1,164 @@
+title: Handie
+description:
+keywords:
+tagline: 渐进式配置驱动企业级中后台前端应用开发框架
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  controls:
+    output: true
+    permalink: /:collection/:path/
+  utils:
+    output: true
+    permalink: /:collection/:path/
+  guides:
+    output: true
+    permalink: /:collection/:path/
+
+# Handling Reading
+exclude:
+  - .asset-cache
+  - .sass-cache
+  - .vscode
+  - node_modules
+  - build
+  - vendors
+  - src
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - Gruntfile.coffee
+  - bower.json
+  - package.json
+  - package-lock.json
+  - CNAME
+encoding: utf-8
+
+# Plugins
+gems:
+  - jekyll-assets
+  - jekyll-archives
+  - jekyll-feed
+  - jekyll-contentblocks
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
+  - jekyll_version_plugin
+
+# Conversion
+markdown: kramdown
+highlighter: pygments
+
+# Outputting
+permalink: /posts/:title/
+timezone: Asia/Shanghai
+
+# YAML frontmatter
+defaults:
+  # 默认
+  - scope:
+      path: ""
+    values:
+      layout: default
+  # 页面
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+  # 文章
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      css:
+        - pages/post
+      js:
+        - initializers/time
+        - initializers/lazyload
+      author:
+        name: 欧雷
+        email: ourairyu@gmail.com
+        uri: https://ourai.ws/
+        slug: ourai
+        twitter: ourairyu
+      siblings: true
+  - scope:
+      path: ""
+      type: controls
+    values:
+      layout: control
+      css:
+        - pages/post
+      js:
+        - initializers/time
+        - initializers/lazyload
+  - scope:
+      path: ""
+      type: utils
+    values:
+      layout: util
+      css:
+        - pages/post
+      js:
+        - initializers/time
+        - initializers/lazyload
+  - scope:
+      path: ""
+      type: guides
+    values:
+      layout: guide
+      css:
+        - pages/post
+      js:
+        - initializers/time
+        - initializers/lazyload
+
+
+
+# =====
+# Plugin-specific configurations
+# =====
+
+# Jekyll Archives
+# https://github.com/jekyll/jekyll-archives
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+    - year
+  layouts:
+    category: archive/category
+    tag: archive/tag
+    year: archive/year
+  permalinks:
+    category: "/categories/:name/"
+    tag: "/tags/:name/"
+    year: "/archives/:year/"
+
+# Jekyll Feed
+feed:
+  path: atom.xml
+name: Handie
+author:
+  name: 欧雷
+  email: ourairyu@gmail.com
+  uri: https://ourai.ws/
+  twitter: ourairyu
+github:
+  url: https://handiejs.github.io
+
+
+
+# =====
+# Customized configurations
+# =====
+
+# Modules
+module:
+  comment: false
+  share: true

@@ -1,0 +1,20 @@
+{% capture ver %}{% project_version %}{% endcapture %}
+{% assign start_year = "2016" %}
+{% assign current_year = site.time | date: "%Y" %}
+<footer class="Page-footer Footer">
+  <div class="container">
+    <div class="Footer-description">
+      <!-- 重要链接 -->
+      <nav class="Footer-navs">
+        <ul>
+          <li><a href="https://ntks.ourai.ws/" title="访问「反混沌」" target="_blank" rel="external nofollow"><span>反混沌</span></a></li>
+          <li><a href="https://github.com/handiejs" target="_blank" rel="external nofollow"><span>GitHub</span></a></li>
+        </ul>
+      </nav>
+      <!-- 网站版权 -->
+      <div class="Footer-copyright">
+        <p>&copy; {% if start_year != current_year %}{{ start_year }}-{% endif %}{{ current_year }} <a href="/">{{ site.title }}</a> 版权所有</p>
+      </div>
+    </div>
+  </div>
+</footer>

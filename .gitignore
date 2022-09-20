@@ -1,4 +1,13 @@
 .DS_Store
-.git
 
-node_modules
+node_modules/
+
+.cache/
+.asset-cache/
+.sass-cache/
+
+_site/
+
+site/_data/guides.*
+site/_assets/images/guides/
+site/_guides/
