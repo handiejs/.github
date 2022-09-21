@@ -16,6 +16,12 @@ collections:
   guides:
     output: true
     permalink: /:collection/:path/
+  descriptors:
+    output: true
+    permalink: /:collection/:path/
+  widgets:
+    output: true
+    permalink: /:collection/:path/
 
 # Handling Reading
 exclude:
@@ -110,6 +116,26 @@ defaults:
   - scope:
       path: ""
       type: guides
+    values:
+      layout: guide
+      css:
+        - pages/post
+      js:
+        - initializers/time
+        - initializers/lazyload
+  - scope:
+      path: ""
+      type: descriptors
+    values:
+      layout: guide
+      css:
+        - pages/post
+      js:
+        - initializers/time
+        - initializers/lazyload
+  - scope:
+      path: ""
+      type: widgets
     values:
       layout: guide
       css:

@@ -11,3 +11,11 @@ _site/
 site/_data/guides.*
 site/_assets/images/guides/
 site/_guides/
+
+site/_data/descriptors.*
+site/_assets/images/descriptors/
+site/_descriptors/
+
+site/_data/widgets.*
+site/_assets/images/widgets/
+site/_widgets/
