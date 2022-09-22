@@ -147,7 +147,7 @@ export default ([] as ComponentDescriptor[]).concat(
 
 模块描述器是一个比较简单的 JavaScript 对象，通过它能够很直观地知道依赖了哪些模块，有哪些可被其他模块使用的资源，模块内用了哪些 UI 组件（不包括用 ES Modules 直接引入的），以及模块所拥有的视图、服务端动作等——可以说，模块描述器相当于物料清单。
 
-在 Handie 推荐的[目录结构划分模式](https://www.yuque.com/handie/cookbook/directory-structure)中，领域/业务模块都存放在 `domain` 文件夹下；但在常见的中后台前端项目目录结构中，可以把 `pages` 或 `views` 文件夹当作 `domain` 文件夹来用。
+在 Handie 推荐的[目录结构划分模式](/guides/directory-structure/)中，领域/业务模块都存放在 `domain` 文件夹下；但在常见的中后台前端项目目录结构中，可以把 `pages` 或 `views` 文件夹当作 `domain` 文件夹来用。
 
 每个领域/业务模块文件夹下都要有一个用来导出模块描述器的 `index.ts` 文件：
 

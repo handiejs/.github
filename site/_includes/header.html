@@ -1,7 +1,7 @@
 <header class="Page-header">
   <div class="navbar navbar-static-top">
     <div class="{% if site.data.repos[page.repo] %}container-fluid{% else %}container{% endif %}">
-      <div style="float: right; display: flex; align-items: center; height: 60px;">
+      <div style="float: right; display: flex; align-items: center; height: 60px; margin: 0 24px 0 30px;">
         <a href="https://github.com/handiejs" target="_blank" rel="external nofollow" style="font-size: 24px; color: #333;"><i class="fa fa-github"></i></a>
       </div>
       <div class="navbar-header">
@@ -15,9 +15,15 @@
       </div>
       <!-- 导航 -->
       <nav class="Page-navs navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="/guides/intro/">指南</a></li>
-          <li><a href="/descriptors/model/">API</a></li>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="/learn/" data-toggle="dropdown">学习 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/guides/intro/">指南</a></li>
+              <li><a href="/descriptors/model/">API</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:void(0);">生态</a></li>
         </ul>
       </nav>
     </div>
