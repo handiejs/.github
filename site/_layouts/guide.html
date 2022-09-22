@@ -1,12 +1,91 @@
 ---
-layout: page
+layout: default
+
+css:
+  - share
+js:
+  - share.min
+  - components
 ---
 
-{{ content }}
+{% include header.html %}
+<div class="Page-content">
+  {% assign repo = site.data.repos[page.repo] %}
+  {% assign url_parts = page.id | split: "/" %}
 
-<script>$('table').addClass('table table-bordered')</script>
+  {% if repo and repo.toc %}
+  <aside class="Page-aside">
+    <nav class="AsideNav">
+      <ul>
+        {% for item in repo.toc %}
+          {% if item.slug or item.items %}
+          <li>
+            {% assign collection = item.collection | default: repo.collection %}
+            {% assign docs = site.data[collection].items %}
+            {% if item.slug %}
+              {% assign doc = docs[item.slug] %}
+              <a{% if item.slug == url_parts[2] %} class="is-selected"{% endif %} href="/{{ collection }}/{{ item.slug }}/">{{ doc.title }}</a>
+            {% else %}
+              <span>{{ item.text }}</span>
+              <ul>
+                {% for sub_item in item.items %}
+                  {% assign sub_doc = docs[sub_item] %}
+                  <li>
+                    {% if sub_item.items %}
+                      <span>{{ sub_item.text }}</span>
+                      <ul>
+                        {% for slug in sub_item.items %}
+                          {% assign third_doc = docs[slug] %}
+                          <li><a{% if slug == url_parts[2] %} class="is-selected"{% endif %} href="/{{ collection }}/{{ slug }}/">{{ third_doc.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    {% else %}
+                      <a{% if sub_item == url_parts[2] %} class="is-selected"{% endif %}  href="/{{ collection }}/{{ sub_item }}/">{{ sub_doc.title }}</a>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+  {% endif %}
+  <main class="Page-main">
+    <article class="Article container-fluid">
+      <header class="Article-header">
+        <h1 class="Article-title">{{ page.title }}</h1>
+      </header>
+      <div class="Article-content col-md-9">{{ content }}</div>
+      <footer class="Article-footer col-md-3">
+        {% include widgets/social.html %}
+        {% include widgets/toc.html %}
+      </footer>
+    </article>
+    {% include footer.html %}
+  </main>
+</div>
 
-{% contentfor footer %}
-  {% include widgets/social.html %}
-  {% include widgets/toc.html %}
-{% endcontentfor %}
+<script>
+  $('table').addClass('table table-bordered');
+  $(document).ready(function() {
+    var $el = $('.Page-aside');
+    var $cnt = $('.Page-content');
+
+    $el.on({
+      'affixed-top.bs.affix': function() {
+        $el.css('position', 'static');
+      },
+      'affixed.bs.affix': function() {
+        $el.css('position', 'fixed');
+      }
+    }).affix({
+      top: $el.offset().top,
+      bottom: function() {
+        return $(document).height() - ($cnt.offset().top + $cnt.outerHeight(true));
+      }
+    });
+  });
+</script>

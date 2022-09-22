@@ -1,6 +1,9 @@
 <header class="Page-header">
   <div class="navbar navbar-static-top">
-    <div class="container">
+    <div class="{% if site.data.repos[page.repo] %}container-fluid{% else %}container{% endif %}">
+      <div style="float: right; display: flex; align-items: center; height: 60px;">
+        <a href="https://github.com/handiejs" target="_blank" rel="external nofollow" style="font-size: 24px; color: #333;"><i class="fa fa-github"></i></a>
+      </div>
       <div class="navbar-header">
         <button class="navbar-toggle collapsed" type="button" data-target=".Page-navs" data-toggle="collapse">
           <span class="sr-only">切换导航</span>
@@ -13,8 +16,8 @@
       <!-- 导航 -->
       <nav class="Page-navs navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="/guides/">指南</a></li>
-          <!-- <li><a href="/kit/">套件</a></li> -->
+          <li><a href="/guides/intro/">指南</a></li>
+          <li><a href="/descriptors/model/">API</a></li>
         </ul>
       </nav>
     </div>

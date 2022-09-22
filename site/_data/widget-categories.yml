@@ -1,0 +1,18 @@
+items:
+  structural:
+    name: 结构部件
+    types:
+      layout:
+        name: 布局结构组件
+  built-in:
+    name: 内置部件
+    types:
+      view:
+        name: 视图部件
+      field:
+        name: 字段部件
+      action:
+        name: 动作部件
+      search:
+        name: 搜索部件
+sequence:

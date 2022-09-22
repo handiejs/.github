@@ -120,9 +120,11 @@ defaults:
       layout: guide
       css:
         - pages/post
+        - pages/doc
       js:
         - initializers/time
         - initializers/lazyload
+      repo: cookbook
   - scope:
       path: ""
       type: descriptors
@@ -130,9 +132,11 @@ defaults:
       layout: guide
       css:
         - pages/post
+        - pages/doc
       js:
         - initializers/time
         - initializers/lazyload
+      repo: api
   - scope:
       path: ""
       type: widgets
@@ -140,9 +144,11 @@ defaults:
       layout: guide
       css:
         - pages/post
+        - pages/doc
       js:
         - initializers/time
         - initializers/lazyload
+      repo: api
 
 
 

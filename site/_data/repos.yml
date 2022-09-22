@@ -1,0 +1,52 @@
+cookbook:
+  name: 食用手册
+  collection: guides
+  toc:
+    - slug: intro
+    - text: 入门教程
+      items:
+        - getting-started
+        - directory-structure
+        - defining-modules
+        - customization
+    - text: 进阶指南
+    - text: 主要概念
+
+api:
+  name: API 参考
+  collection: widgets
+  toc:
+    - text: 描述器
+      collection: descriptors
+      items:
+        - model
+        - field
+    - text: 结构部件
+      items:
+        - text: 布局结构部件
+          items:
+            - admin-layout-structural-widget
+    - text: 内置部件
+      items:
+        - text: 视图部件
+          items:
+            - form-view-widget
+        - text: 字段部件
+          items:
+            - input-field-widget
+            - number-field-widget
+            - password-field-widget
+            - radio-field-widget
+            - switch-field-widget
+            - textarea-field-widget
+            - url-field-widget
+        - text: 动作部件
+          items:
+            - button-action-widget
+            - dialog-view-button-action-widget
+            - icon-action-widget
+            - link-action-widget
+        - text: 搜索部件
+          items:
+            - form-search-widget
+#        - text: 过滤器部件

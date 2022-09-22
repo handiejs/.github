@@ -31,6 +31,11 @@ function generateDocs() {
     ensureFileExists(dataFile, true);
 
     const data = { items: {} };
+    const isWidget = collection === 'widgets';
+
+    if (isWidget) {
+      data.classified = {};
+    }
 
     scanAndSortByAsc(sourceDir).reverse().forEach(docName => {
       const docSourceDir = `${sourceDir}/${docName}`;
@@ -48,6 +53,18 @@ function generateDocs() {
       metadata.slug = docName;
 
       data.items[docName] = metadata;
+
+      if (isWidget) {
+        if (!data.classified[metadata.category]) {
+          data.classified[metadata.category] = {};
+        }
+
+        if (!data.classified[metadata.category][metadata.type]) {
+          data.classified[metadata.category][metadata.type] = [];
+        }
+
+        data.classified[metadata.category][metadata.type].push(docName);
+      }
 
       saveData(`${distDir}/${docName}.md`, `---\n${safeDump({ title: metadata.title })}---\n\n${content}\n`);
 

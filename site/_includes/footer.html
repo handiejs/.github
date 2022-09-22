@@ -2,7 +2,7 @@
 {% assign start_year = "2016" %}
 {% assign current_year = site.time | date: "%Y" %}
 <footer class="Page-footer Footer">
-  <div class="container">
+  <div class="{% if site.data.repos[page.repo] %}container-fluid{% else %}container{% endif %}">
     <div class="Footer-description">
       <!-- 重要链接 -->
       <nav class="Footer-navs">
