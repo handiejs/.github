@@ -23,8 +23,11 @@ js:
             {% assign collection = item.collection | default: repo.collection %}
             {% assign docs = site.data[collection].items %}
             {% if item.slug %}
-              {% assign doc = docs[item.slug] %}
-              <a{% if item.slug == url_parts[2] %} class="is-selected"{% endif %} href="/{{ collection }}/{{ item.slug }}/">{{ doc.title }}</a>
+              {% if collection == "pages" %}
+                <a{% if item.slug == url_parts[1] %} class="is-selected"{% endif %} href="/{{ item.slug }}/">{{ item.text }}</a>
+              {% else %}
+                <a{% if item.slug == url_parts[2] %} class="is-selected"{% endif %} href="/{{ collection }}/{{ item.slug }}/">{{ docs[item.slug].title }}</a>
+              {% endif %}
             {% else %}
               <span>{{ item.text }}</span>
               <ul>

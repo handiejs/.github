@@ -16,11 +16,19 @@ api:
   name: API 参考
   collection: widgets
   toc:
+    - text: API 总览
+      collection: pages
+      slug: api
     - text: 描述器
       collection: descriptors
       items:
+        # - module
         - model
+        # - action
+        # - view
         - field
+        # - search
+        # - filter
     - text: 结构部件
       items:
         - text: 布局结构部件
