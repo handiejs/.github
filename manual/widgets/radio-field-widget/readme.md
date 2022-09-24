@@ -18,4 +18,3 @@
 | --- | --- | --- | --- |
 | `showUnavailableOption` | `boolean` |  | 是否显示不可用选项（以禁用状态展示） |
 | `hintIcon` | `string` |  | 选项提示信息的图标，详见 Petals 中 `Icon` [API](https://petals.fxxk.design/controls/icon/) 的 `refs` 属性 |
-

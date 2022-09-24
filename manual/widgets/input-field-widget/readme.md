@@ -8,4 +8,3 @@
 | --- | --- | --- | --- |
 | `prefix` | `string | FormControlPrefixAndSuffix` | | 详见 Petals 中 `TextInput` [API](https://petals.fxxk.design/controls/text-input/) 的 `prefix` 属性 |
 | `suffix` | `string | FormControlPrefixAndSuffix` | | 详见 Petals 中 `TextInput` [API](https://petals.fxxk.design/controls/text-input/) 的 `suffix` 属性 |
-

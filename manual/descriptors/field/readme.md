@@ -24,7 +24,7 @@
 | `hint` | `string` | 可选 | 字段的说明提示 |
 | `available` | `string` | 可选 | 字段的动态展示，值为上下文表达式字符串 |
 | `formatter` | `(value: any, contextValue: Record<string, any>) => any` | 可选 | 将字段值格式化为想要的形式 |
-| `renderType` | `string` | 可选 | 要渲染的已注册字段部件别名，框架已内置了一些[常用部件](https://www.yuque.com/handie/api/zc6f69#w7bCT) |
+| `renderType` | `string` | 可选 | 要渲染的已注册字段部件别名，框架已内置了一些[常用部件](/api/) |
 | `widget` | `string | Function` | 可选 | 模块级或视图级的自定义字段部件 |
 | `config` | `Record<string, any>` | 可选 | 表格列与字段部件的配置项，详见下方 |
 | `hidden` | `boolean` | 可选 | 是否不显示，只是不渲染，在做值逻辑处理时还是照常 |
@@ -87,4 +87,4 @@
 
 ### 字段部件
 
-指定字段部件所特有的配置项。内置字段部件的请见[相关说明](https://www.yuque.com/handie/api/zc6f69#w7bCT)。
+指定字段部件所特有的配置项。内置字段部件的请见[相关说明](/api/)。

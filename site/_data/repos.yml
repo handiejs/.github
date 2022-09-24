@@ -9,8 +9,8 @@ cookbook:
         - directory-structure
         - defining-modules
         - customization
-    - text: 进阶指南
-    - text: 主要概念
+    # - text: 进阶指南
+    # - text: 主要概念
 
 api:
   name: API 参考
@@ -19,16 +19,28 @@ api:
     - text: API 总览
       collection: pages
       slug: api
-    - text: 描述器
-      collection: descriptors
+    - text: 底层基础
       items:
-        # - module
-        - model
-        # - action
-        # - view
-        - field
-        # - search
-        # - filter
+        - text: 描述器
+          collection: descriptors
+          items:
+            - module
+            - model
+            # - action
+            # - view
+            - field
+            # - search
+            # - filter
+    #     - text: 上下文
+    #     - text: 无头部件
+    #     - text: 渲染器
+        - text: 其他
+          collection: pages
+          items:
+            - text: 主题配置
+              slug: theme
+            - text: 工具函数
+              slug: utils
     - text: 结构部件
       items:
         - text: 布局结构部件
@@ -38,16 +50,24 @@ api:
       items:
         - text: 视图部件
           items:
+            - table-view-widget
             - form-view-widget
+            - detail-view-widget
+            - form-dialog-view-widget
         - text: 字段部件
           items:
             - input-field-widget
-            - number-field-widget
-            - password-field-widget
-            - radio-field-widget
-            - switch-field-widget
             - textarea-field-widget
             - url-field-widget
+            - password-field-widget
+            - number-field-widget
+            - date-field-widget
+            - date-range-field-widget
+            - date-time-field-widget
+            - date-time-range-field-widget
+            - radio-field-widget
+            - switch-field-widget
+            - select-field-widget
         - text: 动作部件
           items:
             - button-action-widget
@@ -57,4 +77,9 @@ api:
         - text: 搜索部件
           items:
             - form-search-widget
-#        - text: 过滤器部件
+        - text: 过滤器部件
+          items:
+            - input-filter-widget
+            - select-filter-widget
+            - date-range-filter-widget
+            - date-time-range-filter-widget

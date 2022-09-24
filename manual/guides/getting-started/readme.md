@@ -26,7 +26,7 @@ npm i -S element-ui @kokiri/element
 
 ### 支持组件
 
-由于基础部件包中是基于 Petals 采用基于接口编程的方式使用 UI 组件，不依赖任何具体的 UI 组件库，所以需要另外安装符合 Petals 接口规范的 UI 组件库或适配包，如上面提到的 `@kokiri/element`。其他情况可以按照常规方式使用 UI 组件。
+由于基础部件包中是基于 [Petals](https://petals.fxxk.design/) 采用基于接口编程的方式使用 UI 组件，不依赖任何具体的 UI 组件库，所以需要另外安装符合 Petals 接口规范的 UI 组件库或适配包，如上面提到的 `@kokiri/element`。其他情况可以按照常规方式使用 UI 组件。
 
 下面是符合 Petals 接口规范的 Vue 组件库或适配包：
 
