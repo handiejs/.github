@@ -10,7 +10,36 @@ js:
 repo: api
 ---
 
+## 底层基础
+
+### 描述器
+
+| 描述器 | 说明 |
+| --- | --- |
+| [模块描述器](/descriptors/module) |  |
+| [模型描述器](/descriptors/model) |  |
+| [字段描述器](/descriptors/field) |  |
+
+### 其他
+
+| 资源 | 说明 |
+| --- | --- |
+| [主题配置](/theme/) |  |
+| [工具函数](/utils/) |  |
+
+## 结构部件
+
+封装了较为通用的逻辑与部分视图结构的半成品结构部件，可在此之上根据需求进行完整的视图结构渲染。
+
+### 布局结构组件
+
+| 部件 | 说明 |
+| --- | --- |
+| [管理布局结构部件](/widgets/admin-layout-structural-widget/) | 用于中后台应用页面的整体布局 |
+
 ## 内置部件
+
+为支持常规业务需求的快速开发，预设了一些承载使用频率较高的交互模式的功能完整的结构部件。
 
 ### 视图部件
 
@@ -18,15 +47,15 @@ repo: api
 | --- | --- | --- |
 | `list` | `table` | [表格视图部件](/widgets/table-view-widget/) |
 | `object` | `form` | [表单视图部件](/widgets/form-view-widget/) |
-| `object` | `detail` | [详情视图部件](/widgets/detail-view-widget/) |
-| `object` | `form-dialog` | [表单对话框视图部件](/widgets/form-dialog-view-widget/) |
+|  | `detail` | [详情视图部件](/widgets/detail-view-widget/) |
+|  | `form-dialog` | [表单对话框视图部件](/widgets/form-dialog-view-widget/) |
 
 ### 字段部件
 
 | `dataType` 值 | `renderType` 值 | 部件 |
 | --- | --- | --- |
-| `boolean` | `radio` | [单选框字段部件](/widgets/radio-field-widget/) |
-|  | `switch` | [开关字段部件](/widgets/switch-field-widget/) |
+| `boolean` | `switch` | [开关字段部件](/widgets/switch-field-widget/) |
+|  | `radio` | [单选框字段部件](/widgets/radio-field-widget/) |
 | `integer` | `number` | [数字输入框字段部件](/widgets/number-field-widget/) |
 | `float` | `number` | [数字输入框字段部件](/widgets/number-field-widget/) |
 | `string` | `input` | [单行文本框字段部件](/widgets/input-field-widget/) |
@@ -40,6 +69,21 @@ repo: api
 |  | `date-range` | [日期范围字段部件](/widgets/date-range-field-widget/) |
 |  | `date-time` | [日期时间字段部件](/widgets/date-time-field-widget/) |
 |  | `date-time-range` | [日期时间范围字段部件](/widgets/date-time-range-field-widget/) |
+
+### 动作部件
+
+| `renderType` 值 | 部件 |
+| --- | --- |
+| `button` | [按钮动作部件](/widgets/button-action-widget/) |
+| `link` | [链接动作部件](/widgets/link-action-widget/) |
+| `icon` | [图标动作部件](/widgets/icon-action-widget/) |
+| `dialog-view-button` | [对话框视图按钮动作部件](/widgets/dialog-view-button-action-widget/) |
+
+### 搜索部件
+
+| `renderType` 值 | 部件 |
+| --- | --- |
+| `form` | [表单搜索部件](/widgets/form-search-widget/) |
 
 ### 过滤器部件
 

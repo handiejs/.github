@@ -65,15 +65,15 @@ api:
             - date-range-field-widget
             - date-time-field-widget
             - date-time-range-field-widget
-            - radio-field-widget
             - switch-field-widget
+            - radio-field-widget
             - select-field-widget
         - text: 动作部件
           items:
             - button-action-widget
-            - dialog-view-button-action-widget
-            - icon-action-widget
             - link-action-widget
+            - icon-action-widget
+            - dialog-view-button-action-widget
         - text: 搜索部件
           items:
             - form-search-widget
