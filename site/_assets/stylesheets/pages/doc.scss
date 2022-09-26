@@ -1,11 +1,18 @@
 @import "../helper";
+@import "../components/brand";
 
 $headerHeight: 60px;
 $headerBorderWidth: 1px;
+$headerOuterHeight: $headerHeight + $headerBorderWidth;
 $footerHeight: 180px;
 
 .Page {
   $asideWidth: 280px;
+
+  &-header {
+    position: relative;
+    z-index: 1;
+  }
 
   &-content {
     height: 100%;
@@ -19,18 +26,20 @@ $footerHeight: 180px;
   }
 
   &-aside {
-    float: left;
-    overflow: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     width: $asideWidth;
-    height: calc(100% - 61px);
     border-right: 1px solid #dedede;
   }
 
   &-main {
     position: relative;
     width: calc(100% - #{$asideWidth}) !important;
-    min-height: calc(100% - (#{$headerHeight} + #{$headerBorderWidth}));
+    min-height: calc(100% - #{$headerOuterHeight});
     margin-right: 0;
+    margin-left: $asideWidth;
 
     &:after {
       position: relative;
@@ -50,25 +59,25 @@ $footerHeight: 180px;
     bottom: 0;
     left: 0;
   }
-
-  &-aside.affix + &-main,
-  &-aside.affix-bottom + &-main {
-    margin-left: $asideWidth;
-  }
-
-  &-aside.affix,
-  &-aside.affix-bottom {
-    height: 100%;
-    margin-top: -($headerHeight + $headerBorderWidth);
-  }
 }
 
 .Article {
   float: left;
 }
 
+.AsideBrand {
+  padding-left: 15px;
+  font-size: 20px;
+  line-height: $headerHeight;
+  border-bottom: $headerBorderWidth solid #dedede;
+  background-color: #f5f5f5;
+  @include brand-rules;
+}
+
 .AsideNav {
+  height: calc(100% - #{$headerOuterHeight});
   padding: 8px;
+  overflow: auto;
   font-size: 14px;
 
   ul {

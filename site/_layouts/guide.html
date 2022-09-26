@@ -15,6 +15,7 @@ js:
 
   {% if repo and repo.toc %}
   <aside class="Page-aside">
+    <div class="AsideBrand"><a href="https://ntks.ourai.ws/" title="访问「反混沌」" target="_blank" rel="external nofollow">Anti-chaos</a><a href="{{ '/' | prepend: site.url }}" title="回到首页">{{ site.title }}</a></div>
     <nav class="AsideNav">
       {% include doc-toc.html items=repo.toc collection=repo.collection %}
     </nav>
@@ -35,24 +36,4 @@ js:
   </main>
 </div>
 
-<script>
-  $('table').addClass('table table-bordered');
-  $(document).ready(function() {
-    var $el = $('.Page-aside');
-    var $cnt = $('.Page-content');
-
-    $el.on({
-      'affixed-top.bs.affix': function() {
-        $el.css('position', 'static');
-      },
-      'affixed.bs.affix': function() {
-        $el.css('position', 'fixed');
-      }
-    }).affix({
-      top: $el.offset().top,
-      bottom: function() {
-        return $(document).height() - ($cnt.offset().top + $cnt.outerHeight(true));
-      }
-    });
-  });
-</script>
+<script>$('table').addClass('table table-bordered')</script>
