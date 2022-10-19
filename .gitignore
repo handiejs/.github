@@ -19,3 +19,7 @@ site/_descriptors/
 site/_data/widgets.*
 site/_assets/images/widgets/
 site/_widgets/
+
+site/_data/contexts.*
+site/_assets/images/contexts/
+site/_contexts/

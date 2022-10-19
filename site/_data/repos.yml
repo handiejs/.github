@@ -31,7 +31,11 @@ api:
             - field
             # - search
             # - filter
-    #     - text: 上下文
+        - text: 上下文
+          collection: contexts
+          items:
+            - module-context
+            - value-context
     #     - text: 无头部件
     #     - text: 渲染器
         - text: 其他

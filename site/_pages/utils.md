@@ -45,6 +45,8 @@ Handie 是「渐进式配置驱动企业级中后台前端应用开发框架」�
 
 为此而提供了一些用于兼容的函数，在项目完全迁移到 Handie 之后，即当完全元数据化/配置化时，能够以较低的成本移除。
 
+### `resolveComponentDescriptors()`
+
 ### `createModuleContext(nameOrDescriptor)`
 
 创建模块上下文。
@@ -57,6 +59,8 @@ import * as actions from './repository';
 
 export default createModuleContext({ moduleName: MODULE_NAME, actions });
 {% endhighlight %}
+
+### `createViewContext(moduleContext, descriptor)`
 
 ### `createView(moduleContext, descriptor)`
 
@@ -103,9 +107,15 @@ export default createView(context, {
 
 ## 辅助
 
+### `createMoment()`
+
 ### `getAppHelper()`
 
 获取应用助手。
+
+### `getControl()`
+
+### `getRenderer()`
 
 ### `getDependencies(moduleName, refPath?)`
 
@@ -132,6 +142,8 @@ export default class TestWidget extends Vue {}
 基于 Handie 底层机制针对业务应用进行适配与增强。
 
 ### `registerDataType(descriptor)`
+
+### `registerInputPropCheckers()`
 
 ## 定制
 
