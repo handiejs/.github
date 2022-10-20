@@ -36,6 +36,8 @@ api:
           items:
             - module-context
             - value-context
+            - search-context
+            - view-context
     #     - text: 无头部件
     #     - text: 渲染器
         - text: 其他

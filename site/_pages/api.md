@@ -26,6 +26,8 @@ repo: api
 | --- | --- |
 | [模块上下文](/contexts/module-context) | - |
 | [值上下文](/contexts/value-context) | - |
+| [搜索上下文](/contexts/search-context) | - |
+| [视图上下文](/contexts/view-context) | - |
 
 ### 其他
 
