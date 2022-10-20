@@ -6,7 +6,7 @@
 
 ### `getModel()`
 
-获取与当前模块绑定的[模型描述器](/descriptors/model/)，如果没有进行绑定就是 `undefined`。
+获取与当前模块绑定的[模型描述器](/descriptors/model-descriptor/)，如果没有进行绑定就是 `undefined`。
 
 ### `getDependencies(refPath?)`
 

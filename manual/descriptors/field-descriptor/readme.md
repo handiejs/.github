@@ -1,4 +1,4 @@
-用来描述字段相关信息，可在[模型描述器](/descriptors/model/)或[视图描述器](/descriptors/view/)中使用，可用属性会根据使用场景而不同。
+用来描述字段相关信息，可在[模型描述器](/descriptors/model-descriptor/)或[视图描述器](/descriptors/view-descriptor/)中使用，可用属性会根据使用场景而不同。
 
 ## 属性
 

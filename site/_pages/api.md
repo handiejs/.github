@@ -16,9 +16,13 @@ repo: api
 
 | 描述器 | 说明 |
 | --- | --- |
-| [模块描述器](/descriptors/module) | - |
-| [模型描述器](/descriptors/model) | - |
-| [字段描述器](/descriptors/field) | - |
+| [模块描述器](/descriptors/module-descriptor) | - |
+| [模型描述器](/descriptors/model-descriptor) | - |
+| [动作描述器](/descriptors/action-descriptor) | - |
+| [视图描述器](/descriptors/view-descriptor) | - |
+| [字段描述器](/descriptors/field-descriptor) | - |
+| [搜索描述器](/descriptors/search-descriptor) | - |
+| [过滤器描述器](/descriptors/filter-descriptor) | - |
 
 ### 上下文
 

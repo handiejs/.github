@@ -18,11 +18,11 @@
 
 ### `getView()`
 
-获取[视图描述器](/descriptors/view/)。
+获取[视图描述器](/descriptors/view-descriptor/)。
 
 ### `getFields()`
 
-获取[视图字段描述器](/descriptors/field/)列表。
+获取[视图字段描述器](/descriptors/field-descriptor/)列表。
 
 ### `getActions()`
 

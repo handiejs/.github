@@ -24,13 +24,13 @@ api:
         - text: 描述器
           collection: descriptors
           items:
-            - module
-            - model
-            # - action
-            # - view
-            - field
-            # - search
-            # - filter
+            - module-descriptor
+            - model-descriptor
+            - action-descriptor
+            - view-descriptor
+            - field-descriptor
+            - search-descriptor
+            - filter-descriptor
         - text: 上下文
           collection: contexts
           items:
