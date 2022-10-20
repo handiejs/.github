@@ -7,24 +7,12 @@ collections:
   pages:
     output: true
     permalink: /:path/
-  controls:
+  cookbook:
     output: true
-    permalink: /:collection/:path/
-  utils:
+    permalink: /:path/
+  api:
     output: true
-    permalink: /:collection/:path/
-  guides:
-    output: true
-    permalink: /:collection/:path/
-  descriptors:
-    output: true
-    permalink: /:collection/:path/
-  widgets:
-    output: true
-    permalink: /:collection/:path/
-  contexts:
-    output: true
-    permalink: /:collection/:path/
+    permalink: /:path/
 
 # Handling Reading
 exclude:
@@ -98,27 +86,7 @@ defaults:
       siblings: true
   - scope:
       path: ""
-      type: controls
-    values:
-      layout: control
-      css:
-        - pages/post
-      js:
-        - initializers/time
-        - initializers/lazyload
-  - scope:
-      path: ""
-      type: utils
-    values:
-      layout: util
-      css:
-        - pages/post
-      js:
-        - initializers/time
-        - initializers/lazyload
-  - scope:
-      path: ""
-      type: guides
+      type: cookbook
     values:
       layout: guide
       css:
@@ -130,31 +98,7 @@ defaults:
       repo: cookbook
   - scope:
       path: ""
-      type: descriptors
-    values:
-      layout: guide
-      css:
-        - pages/post
-        - pages/doc
-      js:
-        - initializers/time
-        - initializers/lazyload
-      repo: api
-  - scope:
-      path: ""
-      type: widgets
-    values:
-      layout: guide
-      css:
-        - pages/post
-        - pages/doc
-      js:
-        - initializers/time
-        - initializers/lazyload
-      repo: api
-  - scope:
-      path: ""
-      type: contexts
+      type: api
     values:
       layout: guide
       css:

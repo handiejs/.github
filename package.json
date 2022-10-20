@@ -6,9 +6,9 @@
   "main": "index.js",
   "scripts": {
     "build": "node ./build",
-    "clean:site": "rm -rf ./site/.asset-cache",
+    "clean": "rm -rf ./site/.asset-cache",
     "start": "cd ./site && rake run",
-    "predeploy": "npm run clean:site",
+    "predeploy": "npm run clean",
     "deploy": "cd ./site && rake deploy"
   },
   "repository": {

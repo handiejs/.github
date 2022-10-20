@@ -17,7 +17,7 @@ js:
   <aside class="Page-aside">
     <div class="AsideBrand"><a href="https://ntks.ourai.ws/" title="访问「反混沌」" target="_blank" rel="external nofollow">Anti-chaos</a><a href="{{ '/' | prepend: site.url }}" title="回到首页">{{ site.title }}</a></div>
     <nav class="AsideNav">
-      {% include doc-toc.html items=repo.toc collection=repo.collection %}
+      {% include doc-toc.html repo=page.repo items=repo.toc collection=repo.collection %}
     </nav>
   </aside>
   {% endif %}

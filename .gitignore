@@ -8,18 +8,10 @@ node_modules/
 
 _site/
 
-site/_data/guides.*
-site/_assets/images/guides/
-site/_guides/
+site/_data/api/
+site/_assets/images/api/
+site/_api/
 
-site/_data/descriptors.*
-site/_assets/images/descriptors/
-site/_descriptors/
-
-site/_data/widgets.*
-site/_assets/images/widgets/
-site/_widgets/
-
-site/_data/contexts.*
-site/_assets/images/contexts/
-site/_contexts/
+site/_data/cookbook/
+site/_assets/images/cookbook/
+site/_cookbook/

@@ -22,9 +22,17 @@ function generateDocs() {
       return;
     }
 
-    const imageDistDir = resolvePath(__dirname, `../site/_assets/images/${collection}`);
-    const distDir = resolvePath(__dirname, `../site/_${collection}`);
-    const dataFile = resolvePath(__dirname, `../site/_data/${collection}.yml`);
+    const repo = collection === 'guides' ? 'cookbook' : 'api';
+
+    const repoImageDir = resolvePath(__dirname, `../site/_assets/images/${repo}`);
+    const repoDir = resolvePath(__dirname, `../site/_${repo}`);
+    const repoDataDir = resolvePath(__dirname, `../site/_data/${repo}`);
+
+    [repoImageDir, repoDir, repoDataDir].forEach(dir => ensureDirExists(dir));
+
+    const imageDistDir = `${repoImageDir}/${collection}`;
+    const distDir = `${repoDir}/${collection}`;
+    const dataFile = `${repoDataDir}/${collection}.yml`;
 
     ensureDirExists(imageDistDir, true);
     ensureDirExists(distDir, true);
@@ -46,7 +54,7 @@ function generateDocs() {
 
       const metadata = readData(`${docSourceDir}/metadata.yml`);
       const content = readData(`${docSourceDir}/readme.md`)
-        .replace(/src=\"([^\"]+)\"/g, (match, srcPath) => match.replace(srcPath, `{{ '${collection}/${docName}/${srcPath.replace(/.(jp(e)?g|png|gif|svg)/g, '')}' | asset_path }}`))
+        .replace(/src=\"([^\"]+)\"/g, (match, srcPath) => match.replace(srcPath, `{{ '${repo}/${collection}/${docName}/${srcPath.replace(/.(jp(e)?g|png|gif|svg)/g, '')}' | asset_path }}`))
         .replace(/\n\`{3}([^\n]+)/g, (_, lang) => `\n{% highlight ${langs[lang] || lang} %}`)
         .replace(/\`{3}/g, '{% endhighlight %}');
 
