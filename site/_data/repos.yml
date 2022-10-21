@@ -39,7 +39,14 @@ api:
             - search-context
             - view-context
     #     - text: 无头部件
-    #     - text: 渲染器
+        - text: 渲染器
+          collection: renderers
+          items:
+            - view-renderer
+            - form-renderer
+            - field-renderer
+            - action-renderer
+            - filter-renderer
         - text: 其他
           collection: pages
           items:

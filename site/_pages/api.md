@@ -33,6 +33,16 @@ repo: api
 | [搜索上下文](/contexts/search-context) | - |
 | [视图上下文](/contexts/view-context) | - |
 
+### 渲染器
+
+| 渲染器 | 说明 |
+| --- | --- |
+| [视图渲染器](/renderers/view-renderer) | - |
+| [表单渲染器](/renderers/form-renderer) | - |
+| [字段渲染器](/renderers/field-renderer) | - |
+| [动作渲染器](/renderers/action-renderer) | - |
+| [过滤器渲染器](/renderers/filter-renderer) | - |
+
 ### 其他
 
 | 资源 | 说明 |
