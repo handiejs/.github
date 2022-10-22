@@ -38,7 +38,23 @@ api:
             - value-context
             - search-context
             - view-context
-    #     - text: 无头部件
+        - text: 无头部件
+          items:
+            - base-headless-widget
+            - view-headless-widget
+            - field-headless-widget
+            - action-headless-widget
+            - filter-headless-widget
+            - layout-headless-widget
+        - text: 其他
+          collection: pages
+          items:
+            - text: 主题配置
+              slug: theme
+            - text: 工具函数
+              slug: utils
+    - text: 渲染适配
+      items:
         - text: 渲染器
           collection: renderers
           items:
@@ -47,16 +63,7 @@ api:
             - field-renderer
             - action-renderer
             - filter-renderer
-        - text: 其他
-          collection: pages
-          items:
-            - text: 主题配置
-              slug: theme
-            - text: 工具函数
-              slug: utils
-    - text: 结构部件
-      items:
-        - text: 布局结构部件
+        - text: 结构部件
           items:
             - admin-layout-structural-widget
     - text: 内置部件
