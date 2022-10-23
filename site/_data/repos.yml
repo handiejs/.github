@@ -65,6 +65,8 @@ api:
             - filter-renderer
         - text: 结构部件
           items:
+            - base-structural-widget
+            - action-structural-widget
             - admin-layout-structural-widget
     - text: 内置部件
       items:

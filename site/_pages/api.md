@@ -67,10 +67,10 @@ repo: api
 
 封装了较为通用的逻辑与部分视图结构的半成品结构部件，可在此之上根据需求进行完整的视图结构渲染。
 
-#### 布局结构组件
-
 | 部件 | 说明 |
 | --- | --- |
+| [基础结构部件](/widgets/base-structural-widget/) | - |
+| [字段结构部件](/widgets/field-structural-widget/) | - |
 | [管理布局结构部件](/widgets/admin-layout-structural-widget/) | 用于中后台应用页面的整体布局 |
 
 ## 内置部件
