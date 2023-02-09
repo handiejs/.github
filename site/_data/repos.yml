@@ -11,6 +11,9 @@ cookbook:
         - customization
     # - text: 进阶指南
     # - text: 主要概念
+    - text: 常见问题
+      collection: pages
+      slug: faq
 
 api:
   name: API 参考
